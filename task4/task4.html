@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Registration Form</h2>
+    <form id="registrationForm">
+
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+      <span class="error" id="nameError"></span>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+      <span class="error" id="emailError"></span>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" required>
+      <span class="error" id="passwordError"></span>
+      <div id="strength">Password Strength: </div>
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" required>
+      <span class="error" id="dobError"></span>
+
+      <label for="phone">Phone Number:</label>
+      <input type="text" id="phone" required>
+      <span class="error" id="phoneError"></span>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+  <script src="task4.js"></script>
+</body>
+</html>
