@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To-Do List App</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .completed { text-decoration: line-through; color: gray; }
+    .due-date { margin-left: 10px; font-size: 0.9em; color: darkred; }
+    button { margin-left: 5px; }
+    .filters { margin-top: 15px; }
+  </style>
+</head>
+<body>
+  <h1>To-Do List</h1>
+  <input id="taskInput" type="text" placeholder="Enter task">
+  <input id="dueDateInput" type="date">
+  <button id="addBtn">Add Task</button>
+
+  <ul id="taskList"></ul>
+
+  <div class="filters">
+    <button data-filter="all">All</button>
+    <button data-filter="completed">Completed</button>
+    <button data-filter="pending">Pending</button>
+  </div>
+
+  <script src="task6.js"></script>
+</body>
+</html>
