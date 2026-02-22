@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Catalog</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Book Catalog</h1>
+    <select id="genre-filter">
+        <option value="">All Genres</option>
+        <option value="Classic">Classic</option>
+        <option value="Fantasy">Fantasy</option>
+        <option value="Science Fiction">Science Fiction</option>
+        <option value="Romance">Romance</option>
+    </select>
+    <select id="author-filter">
+        <option value="">All Authors</option>
+    </select>
+    <input type="number" id="price-min" placeholder="Min Price">
+    <input type="number" id="price-max" placeholder="Max Price">
+    <button id="apply-filters">Apply Filters</button>
+    <table id="book-table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Genre</th>
+                <th>Price</th>
+                <th>Publication Date</th>
+            </tr>
+        </thead>
+        <tbody id="book-table-body">
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
