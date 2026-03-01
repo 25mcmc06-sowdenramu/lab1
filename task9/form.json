@@ -1,0 +1,81 @@
+{
+  "fields": [
+    {
+      "label": "Name",
+      "type": "text",
+      "name": "name",
+      "required": true
+    },
+    {
+      "label": "Email",
+      "type": "email",
+      "name": "email",
+      "required": true
+    },
+    {
+      "label": "Password",
+      "type": "password",
+      "name": "password",
+      "required": true
+    },
+    {
+      "label": "State",
+      "type": "select",
+      "name": "state",
+      "options": [
+        {"value": "", "label": "Select State"},
+        {"value": "Maharashtra", "label": "Maharashtra"},
+        {"value": "Delhi", "label": "Delhi"},
+        {"value": "Tamil Nadu", "label": "Tamil Nadu"},
+        {"value": "Other", "label": "Other"}
+      ],
+      "required": true
+    },
+    {
+      "label": "City",
+      "type": "select",
+      "name": "city",
+      "options": [
+        {"value": "", "label": "Select City"},
+        {"value": "Mumbai", "label": "Mumbai"},
+        {"value": "Pune", "label": "Pune"},
+        {"value": "Chennai", "label": "Chennai"}
+      ],
+      "required": true,
+      "conditional": {
+        "field": "state",
+        "value": "Maharashtra"
+      }
+    },
+    {
+      "label": "City",
+      "type": "select",
+      "name": "city",
+      "options": [
+        {"value": "", "label": "Select City"},
+        {"value": "Delhi", "label": "Delhi"},
+        {"value": "New Delhi", "label": "New Delhi"}
+      ],
+      "required": true,
+      "conditional": {
+        "field": "state",
+        "value": "Delhi"
+      }
+    },
+    {
+      "label": "City",
+      "type": "select",
+      "name": "city",
+      "options": [
+        {"value": "", "label": "Select City"},
+        {"value": "Chennai", "label": "Chennai"},
+        {"value": "Coimbatore", "label": "Coimbatore"}
+      ],
+      "required": true,
+      "conditional": {
+        "field": "state",
+        "value": "Tamil Nadu"
+      }
+    }
+  ]
+}

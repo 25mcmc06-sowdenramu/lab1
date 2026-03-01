@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tabbed Navigation</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="tabs.js"></script>
+  <style>
+    .tabs {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .tabs li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+    .tabs li a {
+      text-decoration: none;
+      color: #000;
+    }
+    .tabs li.active a {
+      color: #fff;
+      background-color: #337ab7;
+      padding: 10px;
+    }
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <ul class="tabs">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="tab-content" id="home">
+    <h2>Home</h2>
+    <p>This is the home tab.</p>
+  </div>
+  <div class="tab-content" id="about">
+    <h2>About</h2>
+    <p>This is the about tab.</p>
+  </div>
+  <div class="tab-content" id="contact">
+    <h2>Contact</h2>
+    <p>This is the contact tab.</p>
+  </div>
+  <script>
+    $(document).ready(function() {
+      $('.tabs').tabs({
+        activeClass: 'active',
+        animationSpeed: 500,
+        defaultTab: 'home'
+      });
+    });
+  </script>
+</body>
+</html>
